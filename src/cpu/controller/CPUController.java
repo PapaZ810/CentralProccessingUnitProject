@@ -15,7 +15,7 @@ public class CPUController
 	
 	public void start()
 	{
-		String userInput = JOptionPane.showInputDialog(null, "What is the clock speed of your CPU?");
+		String userInput = JOptionPane.showInputDialog(null, "What is the clock speed of your CPU in GHz?");
 		double clockSpeed = -99.99;
 		if (validDouble(userInput))
 		{
@@ -26,7 +26,7 @@ public class CPUController
 		userInput = JOptionPane.showInputDialog(null, "What architecture is your CPU?");
 		userCPU.setArchitecture(userInput);
 		
-		userInput = JOptionPane.showInputDialog(null, "How many cores dos the CPU have?");
+		userInput = JOptionPane.showInputDialog(null, "How many cores does the CPU have?");
 		int core = -1;
 		if (validInt(userInput))
 		{
@@ -42,7 +42,24 @@ public class CPUController
 		{
 			JOptionPane.showMessageDialog(null, "That is a bad buy!");
 		}
+		arrayInit();
 	}
+	
+	private void arrayInit()
+	{
+		for (int index = 0; index < CPU.length; index += 1)
+		{
+			if (index % 2 == 0)
+			{
+				CPU[index] = new myCPU();
+			}
+			else
+			{
+				CPU[index] = new myCPU(index * 30);
+			}
+		}
+	}
+	
 	public boolean validDouble(String mightBeDouble)
 	{
 		boolean isValid = false;
@@ -58,6 +75,7 @@ public class CPUController
 		}
 		return isValid;
 	}
+	
 	public boolean validInt(String maybeInt)
 	{
 		boolean isValid = false;

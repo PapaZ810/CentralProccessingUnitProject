@@ -5,6 +5,8 @@ public class CPU
 	private String architecture; 
 	private double clockSpeed;
 	private int core;
+	CPU[] myCPU = new CPU[6];
+	
 	
 	public CPU()
 	{
@@ -13,11 +15,12 @@ public class CPU
 		this.core = -1;
 	}
 	
-	public CPU(String architecture, double clockSpeed, int core)
+	public CPU(String architecture, double clockSpeed, int core, CPU[] myCPU)
 	{
 		this.architecture = architecture;
 		this.clockSpeed = clockSpeed;
 		this.core = core;
+		this.myCPU = myCPU;
 	}
 	public String getArchitecture()
 	{
@@ -31,6 +34,10 @@ public class CPU
 	{
 		return clockSpeed;
 	}
+	public CPU[] getMyCPU()
+	{
+		return myCPU;
+	}
 	public void setClockSpeed(Double clockSpeed)
 	{
 		this.clockSpeed = clockSpeed;
@@ -38,6 +45,10 @@ public class CPU
 	public void setArchitecture(String architecture)
 	{
 		this.architecture = architecture;
+	}
+	public void setMyCPU(CPU[] myCPU)
+	{
+		this.myCPU = myCPU;
 	}
 	public void setCore(int core)
 	{
