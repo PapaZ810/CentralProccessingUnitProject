@@ -42,10 +42,10 @@ public class CPUController
 		{
 			JOptionPane.showMessageDialog(null, "That is a bad buy!");
 		}
-		arrayInit();
+		//arrayInit();
 	}
 	
-	private void arrayInit()
+	/*private void arrayInit()
 	{
 		for (int index = 0; index < CPU.length; index += 1)
 		{
@@ -55,10 +55,10 @@ public class CPUController
 			}
 			else
 			{
-				CPU[index] = new myCPU(index * 30);
+				CPU[index] = new myCPU(index * 15);
 			}
 		}
-	}
+	}*/
 	
 	public boolean validDouble(String mightBeDouble)
 	{

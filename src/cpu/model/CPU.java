@@ -5,7 +5,7 @@ public class CPU
 	private String architecture; 
 	private double clockSpeed;
 	private int core;
-	CPU[] myCPU = new CPU[6];
+	CPU[] myCPU = new CPU[10];
 	
 	
 	public CPU()
